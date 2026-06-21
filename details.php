@@ -36,14 +36,11 @@ if (isset($_POST['buy_book_id'])) {
     } elseif ($user_data['light'] < $book_data['cost']) {
         $msg = "Insufficient Light. You need {$book_data['cost']} Light, but you only have {$user_data['light']}.";
     } else {
-        // Calculate the exact deadline deadline
-        $due_date = date('Y-m-d H:i:s', strtotime("+$duration_days days"));
-        
+        $due_date = date('Y-m-d H:i:s', strtotime("+$duration_days days")); 
         $new_light = $user_data['light'] - $book_data['cost'];
         mysqli_query($connection, "UPDATE users SET light = '$new_light' WHERE username = '$username'");
         mysqli_query($connection, "INSERT INTO inventory (username, book_id, due_date) VALUES ('$username', '$bookId', '$due_date')");
         mysqli_query($connection, "UPDATE books SET status = 'borrowed' WHERE id = '$bookId'");
-        
         $msg = "Successfully extracted volume for $duration_days days. Cost: {$book_data['cost']} Light.";
     }
 }
@@ -52,7 +49,6 @@ if (mysqli_num_rows($get_book) == 0) {
     die("<h2 style='color:red; text-align:center; padding: 50px;'>Error 404: The Library does not possess this archival record.</h2>");
 }
 $book = mysqli_fetch_assoc($get_book);
-
 $get_light = mysqli_query($connection, "SELECT light FROM users WHERE username = '$username'");
 $display_light = mysqli_fetch_assoc($get_light)['light'];
 
