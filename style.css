@@ -21,14 +21,11 @@ body {
     background-repeat: no-repeat;
     min-height: 50vh;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
-
-/* Header & Navigation */
 header {
     border-bottom: 2px solid var(--border-gold);
     padding: 15px 0;
@@ -37,15 +34,12 @@ header {
     align-items: center;
     margin-bottom: 30px;
 }
-
 h1, h2, h3 {
     color: var(--border-gold);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0 0 15px 0;
 }
-
-/* Forms */
 .auth-box {
     background: var(--bg-panel);
     border: 1px solid var(--border-gold);
@@ -54,7 +48,6 @@ h1, h2, h3 {
     margin: 100px auto;
     box-shadow: 0 0 15px rgba(195, 160, 91, 0.2);
 }
-
 input, select, textarea {
     width: 100%;
     padding: 10px;
@@ -64,13 +57,10 @@ input, select, textarea {
     box-sizing: border-box;
     margin-bottom: 15px;
 }
-
 input:focus {
     border-color: var(--border-gold);
     outline: none;
 }
-
-/* Buttons */
 .btn {
     background: transparent;
     color: var(--border-gold);
@@ -81,31 +71,25 @@ input:focus {
     font-weight: bold;
     transition: all 0.3s ease;
 }
-
 .btn:hover {
     background: var(--border-gold);
     color: var(--bg-dark);
     box-shadow: 0 0 10px var(--border-gold);
 }
-
 .btn-danger {
     color: var(--accent-red);
     border-color: var(--accent-red);
 }
-
 .btn-danger:hover {
     background: var(--accent-red);
     color: white;
 }
-
-/* Grid layout for Books */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
-
 .card {
     background: var(--bg-panel);
     border: 1px solid #2d353f;
@@ -114,12 +98,10 @@ input:focus {
     position: relative;
     transition: transform 0.2s;
 }
-
 .card:hover {
     transform: translateY(-3px);
     border-color: var(--border-gold);
 }
-
 .badge {
     display: inline-block;
     padding: 3px 8px;
@@ -128,17 +110,14 @@ input:focus {
     border: 1px solid var(--text-muted);
     margin-bottom: 10px;
 }
-
 .nav-links a {
     color: var(--text-light);
     text-decoration: none;
     margin-left: 20px;
 }
-
 .nav-links a:hover {
     color: var(--border-gold);
 }
-
 .search-bar {
     margin-bottom: 30px;
 }
