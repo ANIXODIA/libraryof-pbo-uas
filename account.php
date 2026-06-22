@@ -94,7 +94,6 @@ $total_owned = mysqli_num_rows($my_books_query);
                         <h3><?= htmlspecialchars($book['title']) ?></h3>
                         
                         <?php 
-                            // Time Calculation Logic
                             $now = time();
                             $due = strtotime($book['due_date']);
                             if ($now > $due) {
